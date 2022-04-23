@@ -25,6 +25,8 @@ seeSelected.addEventListener('click', () => {
    const itemsSel = document.querySelectorAll('.item-selected')    
     for (let i = 0; i < itemsSel.length; i++){
         let newItemSel = itemsSel[i].cloneNode(true)
+        newItemSel.classList.add('more-margin')
+        newItemSel.childNodes[1].classList.add('show-content')
         itemsContainer.appendChild(newItemSel)        
     }    
     modal.classList.add('go')
